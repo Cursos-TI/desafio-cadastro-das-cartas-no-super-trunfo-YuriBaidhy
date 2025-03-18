@@ -21,7 +21,7 @@ int main() {
     char Estado1 [2], Estado2 [2];
     char Codigo1 [3], Codigo2 [3];
     char Cidade1 [20], Cidade2 [20];
-    unsigned long int Populacao1, Populacao2;
+    int Populacao1, Populacao2;
     float Area1, Area2;
     float PIB1, PIB2;
     int Pontos1, Pontos2;
@@ -44,8 +44,8 @@ int main() {
     printf("Digite o nome da Cidade: ");
     scanf("%s", &Cidade1);
         
-    pintf("Digite a sua População: ");
-    scanf("%uld", &Populacao1); 
+    printf("Digite a sua População: ");
+    scanf("%d", &Populacao1); 
     
     printf("Informe a sua Área em km²: ");
     scanf("%f", &Area1);
@@ -76,7 +76,7 @@ int main() {
     scanf("%s", &Cidade2);
         
     printf("Digite a sua População: ");
-    scanf("%uld", &Populacao2); 
+    scanf("%d", &Populacao2); 
     
     printf("Informe a sua Área em km²: ");
     scanf("%f", &Area2);
