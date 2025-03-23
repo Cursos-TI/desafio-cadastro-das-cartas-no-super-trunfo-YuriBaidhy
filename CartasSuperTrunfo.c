@@ -28,6 +28,7 @@ int main() {
     float Densidade1, Densidade2;
     float Pibpercapita1, Pibpercapita2;
     float superpoder1, superpoder2;
+    int opcao1, opcao2;
 
     //Primeiramente, o usuário deve responder as perguntar com os dados da cidade escolhida para "Carta 1"
     //Em seguida, o usuário responderá as perguntas com os dados da cidade escolhida para "Carta 2"
@@ -148,6 +149,175 @@ int main() {
     printf("PIB per Capita: Carta 1 Venceu: %d\n", Pibpercapita1 > Pibpercapita2);
     printf("Super Poder: Carta 1 Venceu: %d \n", superpoder1 > superpoder2);
     printf("\n");
+
+        //Menu interativo para o usuário escolher qual atributo comparar
+
+        printf("*** ATRIBUTOS PARA COMPARAÇÃO ***\n");
+        printf("1.População\n");
+        printf("2.Área\n");
+        printf("3.PIB\n");
+        printf("4.Número de Pontos Turísticos\n");
+        printf("5.Densidade Demográfica\n");
+        printf("Digite o item de um dos atributos para realizar a comparação entre as cartas\n");
+        scanf("%d", &opcao1);
+        printf("Digite o item de um segundo atributo para realizar uma outra comparação entre as cartas\n");
+        scanf("%d", &opcao2);
+    
+        switch (opcao1)
+        {
+        case 1:
+            if (Populacao1 > Populacao2)
+            {
+            printf("%s que tem %d habitantes, venceu %s que tem %d habitantes\n", Cidade1, Populacao1, Cidade2, Populacao2);
+            }
+            else if (Populacao1 < Populacao2)
+            {
+            printf("%s que tem %d habitantes, venceu %s que tem %d habitantes\n", Cidade2, Populacao2, Cidade1, Populacao1);
+            }
+            else {
+            printf("EMPATE no atributo População\n");
+            }
+            break;
+    
+        case 2:
+            if (Area1 > Area2)
+            {
+            printf("%s que tem %.2f km² de Área, venceu %s que tem %.2f km² de Área\n", Cidade1, Area1, Cidade2, Area2);
+            }
+            else if (Area1 < Area2)
+            {      
+            printf("%s que tem %.2f km² de Área, venceu %s que tem %.2f km² de Área\n", Cidade2, Area2, Cidade1, Area1);
+            }
+            else {
+            printf("EMPATE no atributo Área\n");
+            }
+            break;
+    
+        case 3:
+            if (PIB1 > PIB2)
+            {
+            printf("%s que tem um PIB de R$ %.2f, venceu %s que tem um PIB de R$ %.2f\n", Cidade1, PIB1, Cidade2, PIB2);
+            }
+            else if (PIB2 < PIB1)
+            {      
+            printf("%s que tem um PIB de R$ %.2f, venceu %s que tem um PIB de R$ %.2f\n", Cidade2, PIB2, Cidade2, PIB2);
+            }
+            else {
+            printf("EMPATE no atributo PIB\n");
+            }
+            break;
+    
+        case 4:
+            if (Pontos1 > Pontos2)
+            {
+            printf("%s que tem %d Pontos Turísiticos, venceu %s que tem %d Pontos Turísticos\n", Cidade1, Pontos1, Cidade2, Pontos2);
+            }
+            else if (Pontos2 < Pontos1)
+            {      
+            printf("%s que tem %d Pontos Turísiticos, venceu %s que tem %d Pontos Turísticos\n", Cidade2, Pontos2, Cidade1, Pontos1);
+            }
+            else {
+            printf("EMPATE no atributo Quantidade de Pontos Turísticos\n");
+            }
+            break;
+    
+        case 5:
+            if (Densidade1 < Densidade2)
+            {
+            printf("%s que tem a Densidade Demográfica de %.2f hab/km², venceu %s que tem a Densidade Demográfica de %.2f hab/km² \n", Cidade1, Densidade1, Cidade2, Densidade2);
+            }
+            else if (Densidade1 > Densidade2)
+            {      
+            printf("%s que tem a Densidade Demográfica de %.2f hab/km², venceu %s que tem a Densidade Demográfica de %.2f hab/km²\n", Cidade2, Densidade2, Cidade1, Densidade1);
+            }
+            else {
+            printf("EMPATE no atributo Densidade Demográfica\n");
+            }
+            break;
+    
+        default:
+            printf("Opção Inválida\n");
+            break;
+        }
+    
+        switch (opcao2)
+        {
+        case 1:
+            if (Populacao1 > Populacao2)
+            {
+            printf("%s que tem %d habitantes, venceu %s que tem %d habitantes\n", Cidade1, Populacao1, Cidade2, Populacao2);
+            }
+            else if (Populacao1 < Populacao2)
+            {
+            printf("%s que tem %d habitantes, venceu %s que tem %d habitantes\n", Cidade2, Populacao2, Cidade1, Populacao1);
+            }
+            else {
+            printf("EMPATE no atributo População\n");
+            }
+            break;
+    
+        case 2:
+            if (Area1 > Area2)
+            {
+            printf("%s que tem %.2f km² de Área, venceu %s que tem %.2f km² de Área\n", Cidade1, Area1, Cidade2, Area2);
+            }
+            else if (Area1 < Area2)
+            {      
+            printf("%s que tem %.2f km² de Área, venceu %s que tem %.2f km² de Área\n", Cidade2, Area2, Cidade1, Area1);
+            }
+            else {
+            printf("EMPATE no atributo Área\n");
+            }
+            break;
+    
+        case 3:
+            if (PIB1 > PIB2)
+            {
+            printf("%s que tem um PIB de R$ %.2f, venceu %s que tem um PIB de R$ %.2f\n", Cidade1, PIB1, Cidade2, PIB2);
+            }
+            else if (PIB2 < PIB1)
+            {      
+            printf("%s que tem um PIB de R$ %.2f, venceu %s que tem um PIB de R$ %.2f\n", Cidade2, PIB2, Cidade2, PIB2);
+            }
+            else {
+            printf("EMPATE no atributo PIB\n");
+            }
+            break;
+    
+        case 4:
+            if (Pontos1 > Pontos2)
+            {
+            printf("%s que tem %d Pontos Turísiticos, venceu %s que tem %d Pontos Turísticos\n", Cidade1, Pontos1, Cidade2, Pontos2);
+            }
+            else if (Pontos2 < Pontos1)
+            {      
+            printf("%s que tem %d Pontos Turísiticos, venceu %s que tem %d Pontos Turísticos\n", Cidade2, Pontos2, Cidade1, Pontos1);
+            }
+            else {
+            printf("EMPATE no atributo Quantidade de Pontos Turísticos\n");
+            }
+            break;
+    
+        case 5:
+            if (Densidade1 < Densidade2)
+            {
+            printf("%s que tem a Densidade Demográfica de %.2f hab/km², venceu %s que tem a Densidade Demográfica de %.2f hab/km² \n", Cidade1, Densidade1, Cidade2, Densidade2);
+            }
+            else if (Densidade1 > Densidade2)
+            {      
+            printf("%s que tem a Densidade Demográfica de %.2f hab/km², venceu %s que tem a Densidade Demográfica de %.2f hab/km²\n", Cidade2, Densidade2, Cidade1, Densidade1);
+            }
+            else {
+            printf("EMPATE no atributo Densidade Demográfica\n");
+            }
+            break;
+    
+        default:
+            printf("Opção Inválida\n");
+            break;
+        }
+        printf("\n");
+    
 
     // Para apresentar a comparação entre de um atrituto específico inforomando qual cidade venceu...
     //... utilizar a estrutura de decisão composta "if-else"
